@@ -1,0 +1,11 @@
+.addForm{
+    background-color: #282c34;
+    padding: 20px;
+}
+.addForm h2{
+    color: blanchedalmond;
+}
+.addForm input{
+    margin-top: 5px;
+    margin-right: 5px;
+}
