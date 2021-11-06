@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+}
+.img {
+  max-width: 100%;
+}
+.listItem {
+  max-width: 100%;
+  /* background-color: #282c34; */
+  margin: 0 auto;
+  margin: 30px 0;
+}
+.li {
+  font-size: 20px;
+  padding: 10px 20px;
+  border: 1px solid rgb(216, 216, 216);
+  list-style: none;
+  margin-bottom: 10px;
+  transition: 0.5s;
+}
+.li:hover {
+  box-shadow: 0px 0px 2px 1px rgb(107, 107, 107);
+}
+.color {
+  background-color: rgb(143, 143, 143);
+}
+.span {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.span button {
+  // margin-right: 5px;
+  cursor: pointer;
+}
+.num {
+  width: 80px;
+}
+.buttons {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .close {
+    padding: 2px;
+    font-size: 15px;
+  }
+}
+.marked {
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.marked:hover {
+  color: white;
+  background-color: rgb(119, 119, 119);
+}
+.marked-active {
+  color: white;
+  background-color: black;
+}
+.btn-z {
+  max-width: 20px;
+  border: none;
+  visibility: hidden;
+}
+.hidden {
+  max-width: 20px;
+  border: none;
+  visibility: visible;
+}

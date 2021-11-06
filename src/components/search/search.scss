@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+.search {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #282c34;
+  .show {
+    background-color: rgb(98, 98, 98);
+    color: rgb(0, 0, 0);
+  }
+}
+.search input {
+  outline: none;
+  width: 100%;
+  padding: 15px 5px;
+  margin-bottom: 20px;
+  font-size: 25px;
+  border-radius: 5px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.search button {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: #282c34;
+  // background: none;
+  color: cornsilk;
+  border-radius: 15px;
+  margin-right: 20px;
+}
+.search button:hover {
+  color: black;
+  background-color: blanchedalmond;
+}
+/* ////////// */
