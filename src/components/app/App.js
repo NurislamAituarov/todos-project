@@ -11,7 +11,7 @@ function App() {
 
   let newArr = [];
   if (filterName.length !== 0) {
-    newArr = arr.filter((item) => item.name.includes(filterName));
+    newArr = arr.filter((item) => item.name.toLowerCase().includes(filterName));
   } else {
     newArr = arr;
   }
@@ -26,8 +26,18 @@ function App() {
       newArr = arr.filter((item) => item.wages > 1000);
       break;
     case 'ascending':
-      // console.log(newArr);
-      newArr = newArr.sort((a, b) => a.wages - b.wages);
+      newArr.sort((a, b) => a.wages - b.wages);
+      break;
+    case 'alphabet':
+      newArr.sort((a, b) => {
+        if (a.name > b.name) {
+          return 1;
+        }
+        if (a.name < b.name) {
+          return -1;
+        }
+        return 0;
+      });
       break;
     default:
   }

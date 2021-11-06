@@ -1,6 +1,6 @@
 import Item from './item';
 import './list_item.scss';
-import { memo } from 'react';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 // import { useDispatch } from 'react-redux';
 
 const ListItem = ({ state }) => {
@@ -8,21 +8,23 @@ const ListItem = ({ state }) => {
 
   const item = state.map((elem) => {
     return (
-      <li key={elem.id} className={elem.marked ? 'li color' : 'li'}>
-        <Item
-          key={elem.id}
-          id={elem.id}
-          name={elem.name}
-          marked={elem.marked}
-          raise={elem.raise}
-          wages={elem.wages}
-        />
-      </li>
+      <CSSTransition key={elem.id} timeout={500} classNames="my-node">
+        <li key={elem.id} className={elem.marked ? 'li color' : 'li'}>
+          <Item
+            key={elem.id}
+            id={elem.id}
+            name={elem.name}
+            marked={elem.marked}
+            raise={elem.raise}
+            wages={elem.wages}
+          />
+        </li>
+      </CSSTransition>
     );
   });
   return (
     <div className="listItem">
-      <ul>{item}</ul>
+      <TransitionGroup components="ul">{item}</TransitionGroup>
     </div>
   );
 };

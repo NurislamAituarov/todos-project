@@ -7,11 +7,13 @@
   padding: 20px;
   background-color: #282c34;
   .show {
-    background-color: rgb(98, 98, 98);
+    background-color: rgb(221, 221, 221);
     color: rgb(0, 0, 0);
+    font-weight: bold;
   }
 }
 .search input {
+  text-align: center;
   outline: none;
   width: 100%;
   padding: 15px 5px;
@@ -19,6 +21,9 @@
   font-size: 25px;
   border-radius: 5px;
   font-family: 'Times New Roman', Times, serif;
+}
+::-webkit-input-placeholder {
+  color: rgba(136, 136, 136, 0.5);
 }
 .search button {
   font-size: 20px;

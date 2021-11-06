@@ -32,9 +32,14 @@ const Search = () => {
         з/п больше 1000$
       </button>
       <button
-        // className={filterName === 'ascending' ? 'show' : null}
+        className={filterName === 'ascending' ? 'show' : null}
         onClick={() => dispatch(filter('ascending'))}>
         по возрастанию
+      </button>
+      <button
+        className={filterName === 'alphabet' ? 'show' : null}
+        onClick={() => dispatch(filter('alphabet'))}>
+        по Алфавиту
       </button>
     </div>
   );

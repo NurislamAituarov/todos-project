@@ -9,6 +9,10 @@ const AddForm = ({ addForm }) => {
   const [wages, setWages] = useState('');
 
   const onChange = (e) => {
+    if (e.target.value) {
+      e.target.value = e.target.value[0].toUpperCase() + e.target.value.substring(1);
+    }
+
     setValue(e.target.value);
   };
   const onChangeWages = (e) => {
@@ -17,9 +21,11 @@ const AddForm = ({ addForm }) => {
   };
   const onSubmit = (e) => {
     e.preventDefault();
-    dispatch(addItem(value, wages));
-    setValue('');
-    setWages('');
+    if (value && wages) {
+      dispatch(addItem(value, wages));
+      setValue('');
+      setWages('');
+    }
   };
   return (
     <form onSubmit={onSubmit} className="addForm">

@@ -49,13 +49,11 @@ const reducer = (state = initialState, action) => {
           return item;
         }),
       };
-
     case 'SEARCH':
       return {
         ...state,
         arrFilter: action.value,
       };
-
     case 'FILTER':
       return {
         ...state,
