@@ -8,6 +8,7 @@ const AddForm = ({ addForm }) => {
   const [value, setValue] = useState('');
   const [wages, setWages] = useState('');
 
+  // value.bar();
   const onChange = (e) => {
     if (e.target.value) {
       e.target.value = e.target.value[0].toUpperCase() + e.target.value.substring(1);

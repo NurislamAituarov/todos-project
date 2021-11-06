@@ -3,6 +3,7 @@ import Search from '../search/search';
 import ListItem from '../list-item/list_item';
 import AddForm from '../addForm/addForm';
 import { useSelector } from 'react-redux';
+import ErrorBoundary from '../errorBoundary/errorBoundary';
 
 function App() {
   const arr = useSelector((state) => state.arr);
@@ -52,9 +53,15 @@ function App() {
         <h4>Обшее количество сотрудников: {arr.length}</h4>
         <h4>Премию получат: {raise.length}</h4>
       </header>
-      <Search />
-      <ListItem state={newArr} />
-      <AddForm />
+      <ErrorBoundary>
+        <Search />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <ListItem state={newArr} />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <AddForm />
+      </ErrorBoundary>
     </div>
   );
 }
