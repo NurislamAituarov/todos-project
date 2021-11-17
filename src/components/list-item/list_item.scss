@@ -98,6 +98,15 @@
       .span {
         display: block;
         .buttons {
+          div {
+            margin-top: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .close {
+              border-radius: 5px;
+            }
+          }
           display: inline;
           .num {
             width: max-content;
@@ -107,9 +116,8 @@
           .marked {
             margin: 0;
             font-size: 10px;
-            .close {
-              display: inline;
-            }
+            padding-left: 15px;
+            padding-right: 15px;
           }
         }
       }
