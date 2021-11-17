@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import Search from '../search/search';
 import ListItem from '../list-item/list_item';
 import AddForm from '../addForm/addForm';

@@ -21,3 +21,14 @@
 }
 
 /* /////////// */
+
+@media (max-width: 500px) {
+  .App-header {
+    h2 {
+      font-size: 20px;
+    }
+    h4 {
+      font-size: 15px;
+    }
+  }
+}
