@@ -5,7 +5,6 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const ListItem = ({ state }) => {
   // console.log('renderListItem');
-
   const item = state.map((elem) => {
     return (
       <CSSTransition key={elem.id} timeout={500} classNames="my-node">
